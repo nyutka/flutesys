@@ -19,7 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Flute puts you in control of your mission-critical email. Get your own API,
   fix deliverability problems, and don't be locked into a single provider.
 
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "flutesys" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
