@@ -1,0 +1,333 @@
+.how-it-works {
+	padding-top: 70px;
+	padding-bottom: 150px;
+	background-color: $bg-color;
+	position: relative;
+	@include media-down(md) {
+		padding-top: 40px;
+	}
+	.lines {
+		top: -65px;
+		position: absolute;
+		right: 0;
+		left: 0;
+		@include media-down(md) {
+			top: -24px;
+		}
+		@include media-down(xs) {
+			top: -15px;
+		}
+		img{
+			width: 100%;
+		}
+	}
+	h2 {
+		margin-bottom: 15px;
+	}
+	h4 {
+		font-family: $gilroy-bold;
+		margin-bottom: 40px;
+		font-size: $font-size-base;
+		@include media-down(sm) {
+			margin-bottom: 15px;
+		}
+	}
+	.no-pad.col-md-9 {
+		padding: 0;
+		margin-left: -10px;
+	}
+	.flex {
+		margin: 60px 0;
+		align-items: center;
+		@include media-down(sm) {
+			margin: 30px 0;
+			justify-content: center;
+		}
+		.col-md-5 {
+			padding: 0 !important;
+		}
+		.provider {
+			position: relative;
+			&:after {
+				position: absolute;
+				right: 30px;
+				top: 0;
+				content: '';
+				height: 65px;
+				width: 1px;
+				background-color: $border-color;
+				@include media-down(sm) {
+					content: none;
+				}
+			}
+			@include media-down(sm) {
+				text-align: center;
+				font-size: $font-size-small;
+				.red {
+					border-bottom: 1px solid $border-color;
+				}
+			}
+		}
+		.environment-section {
+			@include media-down(sm) {
+				margin-top: 40px;
+				text-align: center;
+			}
+			.environment {
+				width: 100%;
+				max-width: 310px;
+				background-color: $white;
+				box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.11);
+				border: solid 1px $border-color;
+				color: $green;
+				font-size: $font-size-h3;
+				height: 65px;
+				border-radius: 33px;
+				text-align: center;
+				line-height: 65px;
+				margin-bottom: 44px;
+				display: inline-block;
+				@include media-down(sm) {
+					width: 90%;
+				}
+			}
+		}
+		.red {
+			color: $red;
+		}
+		.mb-20 {
+			margin-bottom: 20px;
+			@include media-down(sm) {
+				padding-bottom: 5px;
+				margin: 0;
+			}
+		}
+		.green {
+			color: $green;
+		}
+		.red, .green {
+			i {
+				margin-right: 15px;
+				vertical-align: middle;
+				@include media-down(sm) {
+					margin: 0;
+					display: block;
+				}
+			}
+		}
+		.how-it-work-statistics {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 0;
+			@include media-down(sm) {
+				flex-direction: column;
+				text-align: center;
+			}
+			.red, .green {
+				& + div {
+					font-size: $font-size-h3;
+				}
+			}
+			small {
+				font-size: 15px;
+				@include media-down(sm) {
+					font-size: $font-size-small;
+				}
+			}
+		}
+	}
+	.more-info {
+		font-family: $sanspro;
+		p {
+			margin-bottom: 30px;
+		}
+		ul {
+			li {
+				color: $text-color;
+				i {
+					height: 5px;
+					width: 5px;
+				}
+			}
+		}
+		.btn {
+			font-family: $gilroy-bold;
+		}
+		.bordered-list {
+			display: flex;
+			height: 160px;
+			margin-top: -30px;
+			align-items: center;
+			@include media-down(sm) {
+				margin-top: 0;
+				margin-bottom: 15px;
+				padding: 0 15px;
+			}
+			&:after {
+				content: '';
+				border: 1px solid $gold;
+				padding: 45px;
+				height: 160px;
+				width: 3000px;
+				position: absolute;
+				top: 0px;
+				border-radius: 100px;
+				right: 15px;
+				overflow: hidden;
+				@include media-down(md) {
+					right: 0;
+				}
+
+			}
+			ul {
+				li {
+					margin-bottom: 7px;
+					align-items:  baseline;
+					display: flex;
+					i {
+						margin-top: -5px;
+						margin-right: 10px;
+						float: left;
+						width: 5px;
+						height: 5px;
+					}
+					span {
+						width: 89%;
+						float: right;
+					}
+				}
+			}
+		}
+	}
+}
+.use-cases {
+	position: relative;
+	padding-top:  100px;
+
+	@include media-down(sm) {
+		padding-top:  50px;
+	}
+	
+	.lines img{
+		width: 100%;
+		position: absolute;
+		top: -58px;
+		@include media-down(sm) {
+			top: -15px;
+		}
+	}
+	h2 {
+		position: relative;
+	}
+	.subheader {
+		font-family: $sanspro;
+		font-size: $font-size-base-large;
+		width: 350px;
+		@include media-down(md) {
+			width: 100%;
+		}
+		@include media-down(sm) {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+	}
+	.info {
+		line-height: 1.5;
+		font-family: $sanspro;
+		width: 435px;
+		@include media-down(md) {
+			width: 100%;
+		}
+	}
+	.row {
+		margin-top: 40px;
+		@include media-down(sm) {
+			margin-top: 15px;
+		}
+	}
+	.flex {
+		display: flex;
+		align-items: end;
+		.nav-tabs {
+			border-bottom: none;
+			margin-top: 40px;
+			position: relative;
+			z-index: 10;
+		}
+		
+		@include media-down(sm) {
+			flex-direction: column;
+			text-align: center;
+		}
+		ul li {
+			display: block;
+			float: none;
+			a {
+				font-size: $font-size-h3;
+				line-height: 1.5;
+				font-weight: 500;
+				color: $text-color;
+				margin-bottom: 15px;
+				border: none;
+				padding: 0;
+				i {
+					margin-right: 19px;
+					vertical-align: middle;
+					font-size: 17px;
+				}
+				&:hover {
+					background-color: transparent;
+					color: $text-color;
+					border: none;
+				}
+			}
+			&.active a {
+				background-color: transparent;
+				border: none;
+				color: $green;
+				font-family: $gilroy-bold;
+				i {
+					color: $green;
+				}
+			}
+		}
+		.tab-content {
+			padding-bottom: 100px;
+			min-height: 350px;
+			@include media-down(sm) {
+				padding-bottom: 0;
+			}
+		}
+		img {
+			margin-left: -22px;
+		}
+		.line {
+			width: 319px;
+			height: 1px;
+			background-color: #ebebeb;
+			margin: 30px 0;
+			position: relative;
+			z-index: 10;
+			@include media-down(sm) {
+				display: none !important;
+			}
+			& + div {
+				position: relative;
+				z-index: 10;
+				& > a {
+					color: $gold;
+					font-size: 18px;
+					i {
+						margin-left: 28px;
+					}
+					@include media-down(sm) {
+						margin-bottom: 15px;
+						display: block;
+						padding-bottom: 50px;
+					}
+				}
+			}
+		}
+	}
+}

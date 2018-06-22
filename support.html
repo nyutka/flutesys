@@ -1,0 +1,74 @@
+---
+layout: default
+header: dark
+---
+<div class="pricing" id="support">
+	<div class="hero">
+		<div class="container text-center">
+			<h1>Support</h1>
+		</div>
+		<img src="{{ site.baseurl }}/img/lines-main-green.svg">
+	</div>
+	<div class="tabs">
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a href="#demo" aria-controls="demo" role="tab" data-toggle="tab">Request a Demo</a></li>
+			<li role="presentation"><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">Contact Us</a></li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane  active" id="demo">
+				<div class="container">
+					<h2>Request a 15 min Demo</h2>
+					<form>
+						<div class="row">
+							<div class="col-sm-6 col-xs-12">
+								<input type="text"  id="name" placeholder="What's your name?">
+								<input type="text" id="company-website" placeholder="Your Company or website?*">
+								<input type="text"   id="provider" placeholder="What email providers do you use? (e.g. SendGrid, Mailgun)">
+							</div>
+							<div class="col-sm-6 col-xs-12 flex">
+								<select>
+									<option data-display="Select">How many emails do you send per month through those providers?</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select>
+								<textarea placeholder="Any other comments, or topics you want to talk about?"></textarea>
+								<div class="text-right button-section">
+									<button type="submit" class="btn btn-green-gradient btn-sm">Request a Demo</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div role="tabpanel" class="tab-pane" id="contact">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6">
+							<h2>Contact Us</h2>
+							<div class="subheader">Feel free to reach out at any time over email.</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="subheader">For system issues and technical help please contact us via</div>
+							<div><a href="mailto:support@flutemail.com">support@flutemail.com</a></div>
+							<div class="subheader">For any other questions please contact us via</div>
+							<div><a href="mailto:support@flutemail.com">support@flutemail.com</a></div>
+							<div class="subheader">Follow us on Twitter</div>
+							<div><a href=""><i class="twitter-icon"></i>@flutemail</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-lines">
+			<img src="{{ site.baseurl }}/img/footer-no-bg-big.png" class="visible-lg">
+			<img src="{{ site.baseurl }}/img/footer-no-bg.png" class="hidden-lg visible-md visible-sm visible-xs">
+		</div>
+	</div>
+</div>

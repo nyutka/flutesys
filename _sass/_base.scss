@@ -1,0 +1,256 @@
+// Basic styles
+
+body {
+	font-family: $font-family-base;
+	color: $text-color;
+	font-size: 16px;
+	overflow-x:hidden;
+	background-color: $white;
+}
+::selection {
+	color: white;
+	background: #2D6B32; /* WebKit/Blink Browsers */
+}
+html, body {
+	 min-height: 100%;
+	@include media-down(md) {
+		overflow-x:hidden;
+	}
+}
+.btn:focus, .btn:active:focus, .btn.active:focus, 
+input:hover, input:focus, input:active {
+	outline: none;
+}
+a {
+	text-decoration: none;
+	&:hover, &:focus {
+		text-decoration: none;
+		outline: none;
+	}
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+input {
+	height: 50px;
+	border-radius: 25px;
+}
+input, option {
+	overflow:hidden;
+	display:inline-block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+textarea {
+	border-radius: 10px;
+	resize: none;
+	height: 130px;
+	overflow: hidden;
+}
+input, textarea {
+	border: solid 1px #ebebeb;
+	outline: none;
+	line-height: 1.5;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: $text-color;
+}
+::-moz-placeholder { /* Firefox 19+ */
+	color: $text-color;
+}
+:-ms-input-placeholder { /* IE 10+ */
+	color: $text-color;
+}
+:-moz-placeholder {
+	color: $text-color;
+}
+
+// Typography 
+h1, h2, h3, h4, h5, p {
+	padding: 0;
+	margin: 0;
+}
+h1 {
+	font-size: $font-size-h1;
+	font-family: $gilroy-bold;
+	@include media-down(md) {
+		font-size: $font-size-h1-tablet;
+	}
+	@include media-down(sm) {
+		font-size: $font-size-h1-mobile;
+	}
+}
+h2 {
+	font-family: $gilroy-bold;
+	font-size: $font-size-h2;
+	line-height: 1.3;
+	position: relative;
+	@include media-down(sm) {
+		font-size: $font-size-h2-mobile;
+		text-align: center;
+		padding: 0 15px;
+	}
+	@include media-down(xs) {
+		padding: 0;
+		font-size: 24px;
+	}
+}
+h3 {
+	font-family: $gilroy-bold;
+	font-size: $font-size-h3;
+}
+img {
+	max-width: 100%;
+}
+small {
+	font-family: $sanspro;
+	font-size: $font-size-small;
+	opacity: 0.5;
+	line-height: 2;
+	display: block;
+}
+.flex {
+	display: flex;
+}
+.dotes  {
+	height: 10px;
+	width: 10px;
+	content: '';
+	display: inline-block;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	margin-top: -5px;
+}
+// Icons
+i.arrow-right {
+	background: url(../img/arrow-icon.svg) no-repeat;
+	height: 6px;
+	width: 15px;
+	display: inline-block;
+	vertical-align: middle;
+	background-size: cover;
+}
+i.twitter-icon {
+	background: url(../img/twitter-icon.png) no-repeat;
+	height: 20px;
+	width: 20px;
+	margin-right: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	background-size: cover;
+}
+i.header-dot {
+	height: 10px;
+	width: 10px;
+	background: linear-gradient(132deg, #57c362, #2d6b32);
+	position: absolute;
+	border-radius: 50%;
+	margin-left: -22px;
+	top: 15px;
+	@include media-down(sm) {
+		top: 12px;
+		margin-left: -15px;
+	}
+	@include media-down(xs) {
+		top: 7px;
+	}
+}
+i.dot {
+	background: url(../img/dot.svg) no-repeat;
+	height: 10px;
+	width: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+	background-size: cover;
+	@include media-down(md) {
+		
+	}
+}
+i.analysts {
+	background: url(../img/reporting-icon.svg) no-repeat;
+	height: 14px;
+	width: 14px;
+	display: inline-block;
+	vertical-align: middle;
+	background-size: contain;
+}
+
+// Buttons 
+.btn {
+	transition: all 0.3s ease-in; 
+	color: $white;
+	font-weight: bold;
+	border: none;
+	&:focus {
+		outline: none;
+		color: $white;
+	}
+}
+.btn-sm {
+	font-size: $font-size-base;
+	height: 50px;
+	width: 180px;
+	line-height: 50px;
+	padding: 0;
+	@include media-down(md) {
+		font-size: 15px;
+		width: 150px;
+	}
+}
+.btn-md {
+	font-size: $font-size-base;
+	font-family: $gilroy-bold;
+	line-height: 50px;
+	padding: 0;
+	width: 233px;
+	height: 50px;
+	@include media-down(sm) {
+		font-size: 15px;
+		width: 215px;
+	}
+}
+.btn-gold-outline {
+	border-radius: 25px;
+	border: solid 1px #d29f13;
+	background-color: transparent;
+	&:hover {
+		color: $silver;
+	}
+	i {
+		color: $white;
+	}
+}
+.btn.btn-gold-gradient, .btn-gold-gradient:active  {
+	box-shadow: 0 4px 18px 0 rgba(92, 67, 0, 0.24);
+	border-radius: 25px;
+	background: linear-gradient(103deg, #ebcd2b, #d29f13);
+	position: relative;
+	padding: 0 24px;
+	&.btn-arrow {
+		text-align: left;
+		i.arrow-right {
+			background: url(../img/arrow-white.svg) no-repeat;
+			width: 16px;
+			position: absolute;
+			right: 20px;
+			top: 22px;
+			@include media-down(xxs) {
+				display: none !important;
+			}
+		}
+	}
+}
+.btn-green-gradient, .btn-green-gradient:active {
+	border-radius: 25px;
+	background: linear-gradient(105deg, #57c362, #2d6b32);
+	box-shadow: 0 2px 18px 0 rgba(19, 77, 24, 0.46);
+	i {
+		@include media-down(xxs) {
+			display: none;
+		}
+	}
+}

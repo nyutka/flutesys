@@ -1,0 +1,110 @@
+.features {
+	.flex {
+		align-items: center;
+		margin: 140px 0;
+		@include media-down(sm) {
+			flex-direction: column;
+			margin-top: 80px;
+			.col-md-7 {
+				order: 1;
+			}
+		}
+		&:last-child {
+			margin-bottom: 250px;
+		}
+		.col-md-5 {
+			padding: 0 40px;
+			@include media-down(md) {
+				padding: 0 15px;
+			}
+		}
+		.subheader {
+			font-size: $font-size-base-large;
+			font-family: $sanspro;
+			margin-top: 23px;
+			margin-bottom: 21px;
+			line-height: 1.5;
+		}
+		a {
+			color: $gold;
+			font-family: $gilroy-bold;
+			i {
+				margin-left: 8px;
+			}
+			@include media-down(sm) {
+				margin-bottom: 15px;
+				display: block;
+			}
+		}
+		p {
+			line-height: 1.5;
+			font-family: $sanspro;
+			margin-bottom: 10px;
+			a {
+				color: $green;
+				text-decoration: underline;
+				font-family: $sanspro !important;
+			}
+		}
+	}
+	.lines {
+		position: relative;
+		z-index: -1;
+		img {
+			position: absolute;
+			right: 0;
+			top: -210px;
+			left: 0;
+			width: 100%;
+		}
+	}
+	.features-points {
+		padding: 0 0 300px 0;
+		background-color: rgba(185, 187, 187, 0.06);
+		margin-top: -50px;
+		height: 430px;
+		position: relative;
+		@include media-down(sm) {
+			height: auto;
+			padding-bottom: 50px;
+		}
+		& > .container {
+			position: absolute;
+			right: 0;
+			left: 0;
+			top: -125px;
+			display: flex;
+			align-items: center;
+		    justify-content: space-evenly;
+		    z-index: 2;
+		    height: 100%;
+		    @include media-down(sm) {
+		    	flex-direction: column;
+		    	position: relative;
+		    }
+			.feature-block {
+				box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.13);
+				background-color: $white;
+				padding: 30px 40px 60px 40px;
+				border-radius: 20px;
+				width: 40%;
+				height: 100%;
+		    	@include media-down(md) {
+		    		height: 110%;
+		    	}
+		    	@include media-down(sm) {
+		    		width: 100%;
+		    		height: 100%;
+		    	}
+				h3 {
+					color: $green;
+					margin-bottom: 12px;
+					margin-top: 24px;
+				}
+				p {
+					font-family: $sanspro;
+				}
+			}
+		}
+	}
+}

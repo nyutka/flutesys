@@ -1,0 +1,108 @@
+<!-- Fixed navbar -->
+<div class="navbar {{ page.navigation-color }}" role="navigation">
+    <div class="container flex-items">
+        <div class="flex-left {% if page.header %}dark{% endif %}">
+            <div class="navbar-brand">
+                {% if page.header %}
+                <a href="/" class="logo">
+                    <img class="logo-light" alt="Logo" src="/img/logo-green.png">
+                </a>
+                {% else %}
+                <a href="/" class="logo">
+                    <img class="logo-light" alt="Logo" src="/img/logo-white.png">
+                </a>
+                {% endif %}
+            </div>
+            <div id="hamburger"  class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="flex-center hidden-xs {% if page.header %}dark{% endif %}">
+            <ul>
+                <li class="dropdown">
+                    <span{% if page.url == "/use-cases.html" %} class="active"{% elsif page.url == "/features.html" %} class="active"{% endif %}>Product <i class="material-icons">arrow_drop_down</i>
+                        <div class="header-dropdown">
+                            <div class="white">
+                                <div class="heading"><a href="/features">Features</a></div>
+                                <div  class="col-sm-9">Learn about our fundamental innovations.</div>
+                                <div class="row">
+                                    <ul class="col-sm-7 col-xs-7 dropdown-body">
+                                        <li><a href="#">Smart Failover</a></li>
+                                        <li><a href="#">Secure Environments</a></li>
+                                        <li><a href="#">Web & SMTP API</a></li>
+                                        <li><a href="#">Simple Stats</a></li>
+                                    </ul>
+                                    <ul class="col-sm-5 col-xs-5 dropdown-body">
+                                        <li><a href="#">Integrations</a></li>
+                                        <li><a href="#">Paper Trails</a></li>
+                                        <li><a href="#">Load Balancing</a></li>
+                                    </ul>
+                                </div>  
+                            </div>
+                            <div class="grey">
+                                <div class="heading"><a href="/use-cases">How Smart Failover Works</a></div>
+                                <div class="heading"><a href="#">Read the First Whitepaper</a></div>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li><a href="/pricing" {% if page.url == "/pricing.html" %} class="active"{% endif %}>Pricing</a></li>
+
+                <li class="dropdown">
+                    <span>Developers <i class="material-icons">arrow_drop_down</i>
+                        <div class="header-dropdown">
+                            <div class="white">
+                                <div class="heading">Documentation</div>
+                                <div class="col-sm-9">Start integrating Flute's products and tools.</div>
+                                <div class="row">
+                                    <ul class="col-sm-6 col-xs-6 dropdown-body">
+                                        <div>Get Started</div>
+                                        <li><a href="#">Elements</a></li>
+                                        <li><a href="#">Checkout</a></li>
+                                        <li><a href="#">Mobile Apps</a></li>
+                                        <li><a href="#">Libraries</a></li>
+                                    </ul>
+                                    <ul class="col-sm-6 col-xs-6 dropdown-body">
+                                        <div>Popular Topics</div>
+                                        <li><a href="#">Apple Pay</a></li>
+                                        <li><a href="#">Testing</a></li>
+                                        <li><a href="#">Launch Checklist</a></li>
+                                        <li><a href="#">Plug-ins</a></li>
+                                    </ul>
+                                </div>  
+                            </div>
+                            <div class="grey">
+                                <div class="heading"><a href="#">Full API Reference</a></div>
+                                <div class="heading"><a href="#">API Status</a></div>
+                                <div class="heading"><a href="#">Open Source</a></div>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+
+                <li><a {% if page.url == "/support.html" %} class="active"{% endif %} href="/support">Contact Us</a></li>
+                <li><a {% if page.url == "/sign-up" %}class="active"{% endif %} href="#">Sign Up</a></li>
+            </ul>
+        </div>
+        <div class="flex-right hidden-xs">
+            <a href="#" class="btn btn-sm btn-gold-outline">Login</a>
+        </div>
+    </div>
+
+    <div class="mobile-menu navbar-collapse collapse hidden-sm hidden-md hidden-lg">
+        <div class="mobile-menu-body">
+            <div><a href="/product">Product</a></div>
+            <div><a href="/pricing">Pricing</a></div>
+            <div>Developers</div>
+            <ul>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">API Status</a></li>
+            </ul>
+            <div><a href="/support">Contact Us</a></div>
+            <div><a href="/support">Login</a></div>
+        </div>
+    </div>
+</div>

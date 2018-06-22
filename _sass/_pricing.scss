@@ -1,0 +1,279 @@
+.pricing, .features, .how-it-works {
+	.hero {
+		padding-top: 160px;
+		position: relative;
+		h1 {
+			color: $green;
+			margin-bottom: 20px;
+			& + .subheader {
+				line-height: 1.5;
+				font-family: $sanspro;
+				font-size: $font-size-h3;
+				margin-bottom: 18px;
+			}
+		}
+		img {
+			width: 100%;
+		}
+	}
+}
+.pricing {
+	.business-plans {
+		display: flex;
+		align-items: baseline;
+		@include media-down(md) {
+			display: block;
+		}
+		.plans {
+			border-radius: 20px;
+			box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.13);
+			padding: 40px;
+			@include media-down(lg) {
+				padding: 20px 15px;
+			}
+			@include media-down(md) {
+				margin-top: 50px;
+			}
+			&.big {
+				padding: 60px 40px;
+				@include media-down(lg) {
+					padding: 60px 15px;
+				}
+			}
+			& + div {
+					margin-top: 20px;
+				p {
+					width: 90%;
+					display: inline-block;
+					font-family: $sanspro;
+					opacity: 0.5;
+				}
+			}
+			h2 {
+				margin: 30px 0;
+				@include media-down(lg) {
+					font-size: 35px;
+				}
+				@include media-down(md) {
+					margin: 20px 0;
+				}
+			}
+			.title {
+				color: $gold;
+				font-family: $gilroy-bold;
+
+			}
+			.subheader {
+				font-size: $font-size-base-large;
+				font-family: $gilroy-bold;
+				margin-bottom: 20px;
+				@include media-down(lg) {
+					font-size: 18px;
+				}
+			}
+			small {
+				margin-top: 10px;
+			}
+			.btn {
+				margin-top: 30px;
+				@include media-down(md) {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+	.tabs {
+		.nav-tabs {
+			border: none;
+			text-align: center;
+			& > li {
+				white-space: nowrap;
+				float: none;
+				display: inline-block;
+				width: 200px;
+				position: relative;
+				@include media-down(xs) {
+					width: 140px;
+				}
+				& > a {
+					border: none;
+					color: $text-color;
+					font-size: $font-size-h3;
+					transition: all 0.2s ease-in;
+					@include media-down(xs) {
+						font-size: $font-size-base;
+					}
+					&:hover,  
+					&:focus {
+						background-color: transparent;
+						color: $green;
+						&:after {
+							background-color: $green;
+						}
+					}
+					&:after {
+						transition: all 0.2s ease-in;
+						content: '';
+						height: 2px;
+						background-color: $border-color;
+						display: block;
+						top: 0;
+						position: absolute;
+						right: 0;
+						left: -4px;
+					}
+				}
+				&.active > a, 
+				&.active > a:hover, 
+				&.active > a:focus {
+					color: $green;
+					border-top-color: $green;
+					&:after {
+						background-color: $green;
+					}
+				}
+			}
+		}
+	}
+	#monthly {
+		.btn-gold-gradient {
+			margin-top: 50px;
+		}
+		small {
+			margin-top: 12px;
+		}
+		.range-slider {
+			margin-top: 100px;
+		}
+	}
+	#pay-as-you-go {
+		padding-top: 82px;
+		h4 {
+			font-size: $font-size-base-large;
+			font-family: $sanspro;
+			margin-bottom: 18px;
+		}
+		p {
+			font-family: $sanspro;
+			margin-bottom: 10px;
+			padding-left: 0;
+		}
+		.btn {
+			margin-top: 24px;
+		}
+		small {
+			padding: 0 15px;
+			margin-top: 5px;
+		}
+	}
+	h3 {
+		margin-top: 82px;
+		margin-bottom: 15px;
+		@include media-down(sm) {
+			text-align: center;
+			margin-top: 40px;
+		}
+	}
+	.guaranteed {
+		margin-top: 20px;
+		margin-bottom: 100px;
+		@include media-down(sm) {
+			margin-top: 10px;
+			margin-bottom: 30px;
+		}
+		h3 {
+			margin-bottom: 40px;
+		}
+		.subheader {
+			@include media-down(sm) {
+				margin-bottom: 15px;
+				text-align: center;
+			}
+		}
+		ul {
+			li {
+				display: flex;
+				align-items: baseline;
+				margin-bottom: 15px;
+				span {
+					font-family: $sanspro;
+					line-height: 1.5;
+					float: right;
+					width: 90%;
+				}
+				i {
+					color: $green;
+					border: 1px solid $green;
+					padding: 1px;
+					border-radius: 50%;
+					font-size: 12px;
+					float: left;
+					margin-right: 14px;
+				}
+			}
+		}
+	}
+	.faq-lines {
+		position: relative;
+		img {
+			position: absolute;
+			top: -60px;
+			right: 0;
+			left: 0;
+			width: 100%;
+			@include media-down(sm) {
+				top: -30px;
+			}
+			@include media-down(xs) {
+				top: -10px;
+			}
+		}
+	}
+	.faq {
+		background-color: $bg-color;
+		padding: 190px 0 0px 0;
+		@include media-down(sm) {
+			padding-top: 50px;
+		}
+		& + .footer-lines {
+			background-color: rgb(251, 251, 251);
+		}
+		.faq-section {
+			& > div {
+				z-index: 10;
+				position: relative;
+				p {
+					padding-right: 100px;
+					font-family: $sanspro;
+					@include media-down(md) {
+						padding-right: 0;
+					}
+				}
+				h3 {
+					font-weight: 500;
+					padding-right: 25px;
+					margin-bottom: 7px;
+					color: $green;
+					font-family: $font-family-base;
+					margin-top: 40px;
+					@include media-down(md) {
+						padding-right: 0;
+					}
+				}
+			}
+		}
+	}
+	.request-demo {
+		width: 100%;
+		small + div {
+			font-family: $sanspro;
+			line-height: 1.5;
+			margin-top: 33px;
+			margin-bottom: 80px;
+			a {
+				color: $gold;
+				text-decoration: underline;
+			}
+		}
+	}
+}
